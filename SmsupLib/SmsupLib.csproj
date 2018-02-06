@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Smsup</Authors>
+    <Company>Smsup</Company>
+    <Product>SmsupLib</Product>
+    <PackageProjectUrl>https://www.smsup.es/documentacion-api/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/smsup/SmsupLib_csharp</RepositoryUrl>
+    <PackageTags>sms</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
