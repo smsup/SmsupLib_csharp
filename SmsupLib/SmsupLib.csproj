@@ -8,6 +8,9 @@
     <PackageProjectUrl>https://www.smsup.es/documentacion-api/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/smsup/SmsupLib_csharp</RepositoryUrl>
     <PackageTags>sms</PackageTags>
+    <Version>1.1.0</Version>
+    <AssemblyVersion>1.1.0</AssemblyVersion>
+    <FileVersion>1.1.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

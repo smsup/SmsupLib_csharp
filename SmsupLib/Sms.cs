@@ -11,5 +11,6 @@ namespace SmsUp
         public string[] telefonos;
         public string referencia;
         public string remitente;
+        public string codificacion;
     }
 }

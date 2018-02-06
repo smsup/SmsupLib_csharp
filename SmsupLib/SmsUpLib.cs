@@ -9,6 +9,10 @@ namespace SmsUp
 {
     public class SmsUpLib
     {
+        public const string CODIFICACION_GSM = "gsm";
+        public const string CODIFICACION_UNICODE = "uni";
+        public const string CODIFICACION_AUTO = "aut";
+
         protected const string HOST = "https://www.smsup.es";
         protected const string URLsms = "/api/sms/";
         protected const string URLcreditos = "/api/creditos/";
@@ -25,13 +29,19 @@ namespace SmsUp
 
         public string NuevoSms(string texto, string[] numeros, string fechaenvio, string referencia, string remitente)
         {
+            return this.NuevoSms(texto, numeros, fechaenvio, referencia, remitente, CODIFICACION_GSM);
+        }
+
+        public string NuevoSms(string texto, string[] numeros, string fechaenvio, string referencia, string remitente, string codificacion)
+        {
             Sms sms = new Sms
             {
                 texto = texto,
                 fecha = (fechaenvio ?? "NOW"),
                 telefonos = numeros,
                 referencia = referencia,
-                remitente = remitente
+                remitente = remitente,
+                codificacion = codificacion
             };
             JsonSerializerSettings settings = new JsonSerializerSettings { StringEscapeHandling = StringEscapeHandling.EscapeNonAscii };
             string post = JsonConvert.SerializeObject(sms, settings);
